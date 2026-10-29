@@ -1,0 +1,4 @@
+config:
+  guestbook-monitoring:isMinikube: "true"
+  # Refuse to deploy anywhere but minikube, whatever kubectl's current context is.
+  kubernetes:context: minikube

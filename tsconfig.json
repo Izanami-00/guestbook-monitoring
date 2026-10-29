@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        // Output
+        "outDir": "bin",
+        "sourceMap": true,
+        // Environment
+        "target": "ES2022",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "moduleDetection": "force",
+        "types": ["node", "mocha"],
+        "resolveJsonModule": true,
+        // Type Checking
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
+        "strictNullChecks": true
+    },
+    "include": [
+        "index.ts",
+        "src/**/*.ts",
+        "tests/**/*.ts"
+    ]
+}
