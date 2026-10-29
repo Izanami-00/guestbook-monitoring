@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="400" fill="#ffffff"/>
+
+  <!-- namespaces -->
+  <rect x="170" y="15" width="710" height="165" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="185" y="37" font-size="13" font-weight="600" fill="#9a3412">namespace: monitoring</text>
+
+  <rect x="170" y="210" width="710" height="175" rx="10" fill="#eff6ff" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="185" y="232" font-size="13" font-weight="600" fill="#1e40af">namespace: guestbook</text>
+
+  <!-- nodes -->
+  <g font-size="14" fill="#0f172a" text-anchor="middle">
+    <rect x="5" y="45" width="76" height="44" rx="22" fill="#ffffff" stroke="#334155"/>
+    <text x="43" y="72">User</text>
+
+    <rect x="200" y="45" width="150" height="44" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="275" y="72">Grafana</text>
+
+    <rect x="400" y="45" width="150" height="44" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="475" y="72">Prometheus</text>
+
+    <rect x="640" y="45" width="150" height="44" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="715" y="72">Alertmanager</text>
+
+    <rect x="400" y="120" width="150" height="44" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="475" y="147">Blackbox exporter</text>
+
+    <rect x="200" y="270" width="150" height="44" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="275" y="297">Load generator</text>
+
+    <rect x="400" y="262" width="150" height="56" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="475" y="285">Frontend x3</text>
+    <text x="475" y="305" font-size="11" fill="#64748b">+ apache-exporter</text>
+
+    <rect x="640" y="238" width="150" height="52" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="715" y="259">Redis leader</text>
+    <text x="715" y="278" font-size="11" fill="#64748b">+ redis-exporter</text>
+
+    <rect x="640" y="322" width="150" height="52" rx="8" fill="#ffffff" stroke="#334155"/>
+    <text x="715" y="343">Redis replica</text>
+    <text x="715" y="362" font-size="11" fill="#64748b">+ redis-exporter</text>
+  </g>
+
+  <!-- solid edges -->
+  <g stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <line x1="81" y1="67" x2="198" y2="67"/>
+    <line x1="350" y1="67" x2="398" y2="67"/>
+    <line x1="550" y1="67" x2="638" y2="67"/>
+    <line x1="475" y1="89" x2="475" y2="118"/>
+    <line x1="350" y1="292" x2="398" y2="292"/>
+    <line x1="550" y1="280" x2="638" y2="266"/>
+    <line x1="550" y1="302" x2="638" y2="344"/>
+    <line x1="715" y1="290" x2="715" y2="320"/>
+  </g>
+
+  <!-- monitoring edges -->
+  <g stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 4" fill="none" marker-end="url(#arrow)">
+    <line x1="475" y1="164" x2="475" y2="260"/>
+    <path d="M550,80 C600,80 610,140 610,208"/>
+  </g>
+
+  <!-- edge labels -->
+  <g font-size="11" fill="#334155">
+    <text x="125" y="59" text-anchor="middle">NodePort / LB</text>
+    <text x="482" y="238">HTTP probe</text>
+    <text x="617" y="196">scrape exporters</text>
+    <text x="590" y="266" text-anchor="middle">write</text>
+    <text x="586" y="338" text-anchor="middle">read</text>
+    <text x="722" y="309">replication</text>
+  </g>
+</svg>
